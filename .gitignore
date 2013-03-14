@@ -11,8 +11,8 @@ tmp/
 *.bak
 *.swp
 *~.nib
-local.properties
-.classpath
+#local.properties
+#.classpath
 .settings/
 .loadpath
 
@@ -136,8 +136,8 @@ Desktop.ini
 # Packages
 *.egg
 *.egg-info
-dist
-build
+
+#build
 eggs
 parts
 bin
