@@ -13,13 +13,22 @@ import java.util.ArrayList;
 public class SearchCustGUI extends javax.swing.JFrame {
 
     TouristInformationCenter tourist = new TouristInformationCenter();
-    ArrayList<Customer> results;
+    private ArrayList<Customer> results;
+    private String hotel;
+    private String rmNo;
+    private boolean[] dates;
+    private String fir;
+    private String sur;
+    private String pho;
 
     /**
      * Creates new form SearchCustGUI
      */
-    public SearchCustGUI() {
+    public SearchCustGUI(String h, String r, boolean[] d) {
         initComponents();
+        hotel = h;
+        rmNo = r;
+        dates = d;
     }
 
     /**
@@ -37,6 +46,9 @@ public class SearchCustGUI extends javax.swing.JFrame {
         cboCust = new javax.swing.JComboBox();
         lblResult1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        btnCBooking = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txaResults = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,7 +59,7 @@ public class SearchCustGUI extends javax.swing.JFrame {
             }
         });
 
-        lblResult.setText("Results:");
+        lblResult.setText("Customer id:");
 
         cboCust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,8 +69,19 @@ public class SearchCustGUI extends javax.swing.JFrame {
 
         lblResult1.setText("Customer surname:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
         jLabel7.setText("Customer search:");
+
+        btnCBooking.setText("Create Booking");
+        btnCBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCBookingActionPerformed(evt);
+            }
+        });
+
+        txaResults.setColumns(20);
+        txaResults.setRows(5);
+        jScrollPane1.setViewportView(txaResults);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,19 +89,26 @@ public class SearchCustGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblResult)
-                        .addGap(18, 18, 18)
-                        .addComponent(cboCust, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblResult1)
-                        .addGap(38, 38, 38)
+                        .addGap(51, 51, 51)
                         .addComponent(txtLast, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnSearch)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                        .addComponent(btnSearch))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(103, 103, 103))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblResult)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cboCust, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(88, 88, 88)))
+                        .addComponent(btnCBooking))
+                    .addComponent(jScrollPane1))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,15 +120,18 @@ public class SearchCustGUI extends javax.swing.JFrame {
                     .addComponent(txtLast, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblResult1)
                     .addComponent(btnSearch))
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblResult)
-                    .addComponent(cboCust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCBooking)
+                    .addComponent(cboCust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblResult))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-600)/2, (screenSize.height-338)/2, 600, 338);
+        setBounds((screenSize.width-412)/2, (screenSize.height-338)/2, 412, 338);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
@@ -107,7 +140,11 @@ public class SearchCustGUI extends javax.swing.JFrame {
         if (evt.getSource() == btnSearch) {
             results = tourist.searchForCustomer(txtLast.getText());
             for (int i = 0; i < results.size(); i++) {
-                cboCust.addItem(results.get(i).toString());
+                cboCust.addItem(i);
+                fir = results.get(i).getFirst();
+                sur = results.get(i).getSurname();
+                pho = results.get(i).getPhone();
+                txaResults.append("ID: "+ i + ", Name: "+ fir + " " + sur + ", Phone no: " +pho +"\n");
             }
         }
     }//GEN-LAST:event_btnSearchActionPerformed
@@ -115,6 +152,25 @@ public class SearchCustGUI extends javax.swing.JFrame {
     private void cboCustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboCustActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cboCustActionPerformed
+
+    private void btnCBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCBookingActionPerformed
+        // TODO add your handling code here:
+        if (hotel == null) {
+            SearchHotelGUI searchHGUI = new SearchHotelGUI(sur, fir, pho);
+            searchHGUI.setVisible(true);
+            searchHGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        } else {
+            for (int i = 0; i < results.size(); i++) {
+                if(i ==(cboCust.getSelectedItem())) {
+                    //System.out.println(i);
+                    sur = results.get(i).getSurname();
+                    fir = results.get(i).getFirst();
+                    pho = results.get(i).getPhone();
+                    tourist.addBooking(hotel, rmNo, fir, sur, pho, dates);
+               }
+            }
+        }
+    }//GEN-LAST:event_btnCBookingActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,18 +197,19 @@ public class SearchCustGUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new SearchCustGUI().setVisible(true);
-
-
+                //new SearchCustGUI().setVisible(true);
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCBooking;
     private javax.swing.JButton btnSearch;
     private javax.swing.JComboBox cboCust;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblResult;
     private javax.swing.JLabel lblResult1;
+    private javax.swing.JTextArea txaResults;
     private javax.swing.JTextField txtLast;
     // End of variables declaration//GEN-END:variables
 }

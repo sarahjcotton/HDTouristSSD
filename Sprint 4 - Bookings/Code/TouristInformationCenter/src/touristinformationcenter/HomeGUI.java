@@ -26,7 +26,9 @@ public class HomeGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         btnAdd = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         btnSearch = new javax.swing.JButton();
         btnAddAcc = new javax.swing.JButton();
         btnSearchAcc = new javax.swing.JButton();
@@ -34,12 +36,18 @@ public class HomeGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tourist Information Center");
 
+        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel1.setText("TouristInformation Center");
+
         btnAdd.setText("Add Customer");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
+
+        jLabel2.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
+        jLabel2.setText("Main Menu");
 
         btnSearch.setText("Search Customer");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -67,18 +75,30 @@ public class HomeGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(128, 128, 128)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel1)
+                .addContainerGap(35, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(116, 116, 116))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAddAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSearchAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(129, Short.MAX_VALUE))
+                    .addComponent(btnSearchAcc))
+                .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
                 .addComponent(btnAdd)
                 .addGap(28, 28, 28)
                 .addComponent(btnSearch)
@@ -86,26 +106,12 @@ public class HomeGUI extends javax.swing.JFrame {
                 .addComponent(btnAddAcc)
                 .addGap(30, 30, 30)
                 .addComponent(btnSearchAcc)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-416)/2, (screenSize.height-338)/2, 416, 338);
+        setBounds((screenSize.width-333)/2, (screenSize.height-338)/2, 333, 338);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-        AddCustomerGUI addGUI = new AddCustomerGUI();
-        addGUI.setVisible(true);
-        addGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-    }//GEN-LAST:event_btnAddActionPerformed
-
-    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO add your handling code here:
-        SearchCustGUI searchGUI = new SearchCustGUI();
-        searchGUI.setVisible(true);
-        searchGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-    }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnAddAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAccActionPerformed
         // TODO add your handling code here:
@@ -116,10 +122,24 @@ public class HomeGUI extends javax.swing.JFrame {
 
     private void btnSearchAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchAccActionPerformed
         // TODO add your handling code here:
-         SearchHotelGUI searchHGUI = new SearchHotelGUI();
+        SearchHotelGUI searchHGUI = new SearchHotelGUI(null, null, null);
         searchHGUI.setVisible(true);
         searchHGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_btnSearchAccActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+        AddCustomerGUI addGUI = new AddCustomerGUI();
+        addGUI.setVisible(true);
+        addGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        SearchCustGUI searchGUI = new SearchCustGUI(null, null, null);
+        searchGUI.setVisible(true);
+        searchGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,5 +182,7 @@ public class HomeGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnAddAcc;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnSearchAcc;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

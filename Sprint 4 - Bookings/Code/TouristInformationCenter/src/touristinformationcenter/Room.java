@@ -15,14 +15,14 @@ public class Room implements java.io.Serializable {
     private String hotelName;
     private String roomNo;
     private String roomType; //double single etc
-    boolean[] available;
+    boolean[] available; 
 
     public Room(String n, String no, String t, boolean[]a) {
         hotelName = n;
         roomNo = no;
         roomType = t;
         available = a;
-        Arrays.fill(available, Boolean.TRUE);//boolean monday to sunday
+        Arrays.fill(available, Boolean.FALSE);//boolean monday to sunday false == not booked
     }
     
     public String getHotelName(){
@@ -41,18 +41,43 @@ public class Room implements java.io.Serializable {
         return available;
     }  
     
-    public void setAvailability(boolean mon, boolean tues, boolean weds,boolean thurs,boolean fri,boolean sat, boolean sun)
+    public void setMonAv(boolean mon)
     {
-        //reset array to true on a sunday at midnight
+        //reset array to true on a sunday at midnight?
        available[0] = mon;
-       available[1] = tues;
-       available[2] = weds;
-       available[3] = thurs;
-       available[4] = fri;
-       available[5] = sat;
-       available[6] = sun;
-       
     }
+   
+    public void setTueAv(boolean tue)
+    {
+        //reset array to true on a sunday at midnight?
+       available[1] = tue;
+    }
+    public void setWedAv(boolean wed)
+    {
+        //reset array to true on a sunday at midnight?
+       available[2] = wed;
+    }
+    public void setThuAv(boolean thu)
+    {
+        //reset array to true on a sunday at midnight?
+       available[3] = thu;
+    }
+    public void setFriAv(boolean fri)
+    {
+        //reset array to true on a sunday at midnight?
+       available[4] = fri;
+    }
+    public void setSatAv(boolean sat)
+    {
+        //reset array to true on a sunday at midnight?
+       available[5] = sat;
+    }
+    public void setSunAv(boolean sun)
+    {
+        //reset array to true on a sunday at midnight?
+       available[6] = sun;
+    }
+    
     
     
     @Override

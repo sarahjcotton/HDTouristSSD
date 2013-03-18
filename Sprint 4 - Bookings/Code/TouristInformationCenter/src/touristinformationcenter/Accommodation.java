@@ -16,8 +16,7 @@ public class Accommodation implements java.io.Serializable {
     private String address;
     private String phone;
     private String type;   
-    private ArrayList<Room> rooms;
-    private int maxRooms;
+    private ArrayList<Room> rooms;   
 
     public Accommodation(String n, String a, String p, String t) {
         name = n;

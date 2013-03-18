@@ -29,7 +29,7 @@ public class MainTourist {
         //print customer to screen
         //System.out.println("Main output: " +customer);
         //tourist.loadArrayItems();
-        tourist.printCArray();
+        tourist.printCustomerArray();
         // ArrayList<Customer> customersFound = tourist.searchForCustomer(search);
         tourist.searchForCustomer(search); 
         

@@ -34,6 +34,13 @@
       <type id="ArrayList&lt;Room&gt;" name="ArrayList&lt;Room&gt;" description="" />
       <type id="rResults:ArrayList&lt;Room&gt;m&gt;" name="rResults:ArrayList&lt;Room&gt;m&gt;" description="" />
       <type id="rResults:ArrayList&lt;Room&gt;" name="rResults:ArrayList&lt;Room&gt;" description="" />
+      <type id="Customer" name="Customer" description="" />
+      <type id="Accommodation" name="Accommodation" description="" />
+      <type id="Room" name="Room" description="" />
+      <type id="private" name="private" description="" />
+      <type id="String[]" name="String[]" description="" />
+      <type id="boolean[]" name="boolean[]" description="" />
+      <type id="Boolean[]" name="Boolean[]" description="" />
     </custom-types>
   </types>
   <filters />
@@ -160,6 +167,25 @@
             </text>
           </documentation>
         </attribute>
+        <attribute id="abe2bc3454e66477bb0c75d9872bdbc55114" name="type" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+          <stereotypes />
+          <documentation>
+            <text>
+              <content>
+                <paragraph line-spacing="1">
+                  <p index="0">
+                    <t />
+                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                      <text>
+                        <solid-brush color="#FF000000" />
+                      </text>
+                    </style>
+                  </p>
+                </paragraph>
+              </content>
+            </text>
+          </documentation>
+        </attribute>
         <attribute id="a7e80049c18ce482992dfea522fb1f047507" name="rooms[]" type="Boolean" type-id="Uml.Boolean" visibility="private" abstract="false" virtual="false">
           <stereotypes />
         </attribute>
@@ -234,29 +260,6 @@
             <source-code language="ActionScript" />
           </source-codes>
         </operation>
-        <operation id="o0abbae38e467456baaf317cff78ae265956" name="getPostcode" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
-          <parameters />
-          <stereotypes />
-          <documentation>
-            <text>
-              <content>
-                <paragraph line-spacing="1">
-                  <p index="0">
-                    <t />
-                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
-                      <text>
-                        <solid-brush color="#FF000000" />
-                      </text>
-                    </style>
-                  </p>
-                </paragraph>
-              </content>
-            </text>
-          </documentation>
-          <source-codes>
-            <source-code language="ActionScript" />
-          </source-codes>
-        </operation>
         <operation id="oecb968488c184314a639d7489c201734481" name="getPhone" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
           <parameters />
           <stereotypes />
@@ -280,7 +283,53 @@
             <source-code language="ActionScript" />
           </source-codes>
         </operation>
+        <operation id="o0abbae38e467456baaf317cff78ae265956" name="getPostcode" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation>
+            <text>
+              <content>
+                <paragraph line-spacing="1">
+                  <p index="0">
+                    <t />
+                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                      <text>
+                        <solid-brush color="#FF000000" />
+                      </text>
+                    </style>
+                  </p>
+                </paragraph>
+              </content>
+            </text>
+          </documentation>
+          <source-codes>
+            <source-code language="ActionScript" />
+          </source-codes>
+        </operation>
         <operation id="o81f9f233e757474c8f02cb9f6bffc755160" name="getType" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation>
+            <text>
+              <content>
+                <paragraph line-spacing="1">
+                  <p index="0">
+                    <t />
+                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                      <text>
+                        <solid-brush color="#FF000000" />
+                      </text>
+                    </style>
+                  </p>
+                </paragraph>
+              </content>
+            </text>
+          </documentation>
+          <source-codes>
+            <source-code language="ActionScript" />
+          </source-codes>
+        </operation>
+        <operation id="o09b47e258207404d81b3b7dd5fbaa47d7" name="getRooms" type="boolean[]" type-id="boolean[]" visibility="public" abstract="false" virtual="false" static="false">
           <parameters />
           <stereotypes />
           <documentation>
@@ -445,98 +494,6 @@
       </attributes>
       <operations>
         <operation id="o04db7f03b978458ba383deeac11cc108800" name="addRoom(Room)" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
-          <parameters />
-          <stereotypes />
-          <documentation>
-            <text>
-              <content>
-                <paragraph line-spacing="1">
-                  <p index="0">
-                    <t />
-                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
-                      <text>
-                        <solid-brush color="#FF000000" />
-                      </text>
-                    </style>
-                  </p>
-                </paragraph>
-              </content>
-            </text>
-          </documentation>
-          <source-codes>
-            <source-code language="ActionScript" />
-          </source-codes>
-        </operation>
-        <operation id="o2900c7fe4e5145cdb0cd5bcae9abb86d774" name="saveRoomArray" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
-          <parameters />
-          <stereotypes />
-          <documentation>
-            <text>
-              <content>
-                <paragraph line-spacing="1">
-                  <p index="0">
-                    <t />
-                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
-                      <text>
-                        <solid-brush color="#FF000000" />
-                      </text>
-                    </style>
-                  </p>
-                </paragraph>
-              </content>
-            </text>
-          </documentation>
-          <source-codes>
-            <source-code language="ActionScript" />
-          </source-codes>
-        </operation>
-        <operation id="oa2cd58a7ec76462082ee4245ca6bc039801" name="loadRoomsArray" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
-          <parameters />
-          <stereotypes />
-          <documentation>
-            <text>
-              <content>
-                <paragraph line-spacing="1">
-                  <p index="0">
-                    <t />
-                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
-                      <text>
-                        <solid-brush color="#FF000000" />
-                      </text>
-                    </style>
-                  </p>
-                </paragraph>
-              </content>
-            </text>
-          </documentation>
-          <source-codes>
-            <source-code language="ActionScript" />
-          </source-codes>
-        </operation>
-        <operation id="o574bea5a990f48b4b886bd5630432936146" name="printRoomsArray" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
-          <parameters />
-          <stereotypes />
-          <documentation>
-            <text>
-              <content>
-                <paragraph line-spacing="1">
-                  <p index="0">
-                    <t />
-                    <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
-                      <text>
-                        <solid-brush color="#FF000000" />
-                      </text>
-                    </style>
-                  </p>
-                </paragraph>
-              </content>
-            </text>
-          </documentation>
-          <source-codes>
-            <source-code language="ActionScript" />
-          </source-codes>
-        </operation>
-        <operation id="o78dfacea8f4f484da9a453da948ef71e901" name="searchForAvailability" type="rResults:ArrayList&lt;Room&gt;" type-id="rResults:ArrayList&lt;Room&gt;" visibility="public" abstract="false" virtual="false" static="false">
           <parameters />
           <stereotypes />
           <documentation>
@@ -791,9 +748,7 @@
         </operation>
       </operations>
       <template-parameters>
-        <source-codes>
-          <source-code language="ActionScript" />
-        </source-codes>
+        <source-codes />
       </template-parameters>
     </item>
     <item id="di861762156388484350" cid="C001" type="class" name="Customer" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creator="P22aec299e5eb4abc88dbbafcb48ca50a" creation-date="02/15/2013 14:15:13">
@@ -1011,7 +966,7 @@
           <authors />
           <description />
           <creation-date>12/11/2012 13:23:02</creation-date>
-          <change-date>03/02/2013 10:55:01</change-date>
+          <change-date>03/17/2013 11:35:02</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -1055,7 +1010,7 @@
               <end-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di171933797277361851" cid="C001" type="class" name="Room" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 10:28:18">
+          <item id="di171933797277361851" cid="C001" type="class" name="Room" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 10:28:18">
             <stereotypes />
             <tagged-values />
             <documentation>
@@ -1206,7 +1161,7 @@
                   <source-code language="ActionScript" />
                 </source-codes>
               </operation>
-              <operation id="o23e138850f4a4b648e4f287c744de2508" name="getRmType" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <operation id="o23e138850f4a4b648e4f287c744de2508" name="getType" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
                 <parameters />
                 <stereotypes />
                 <documentation>
@@ -1229,7 +1184,7 @@
                   <source-code language="ActionScript" />
                 </source-codes>
               </operation>
-              <operation id="o13e9f00c4efb407f8a0ee912dedf4e6c649" name="getAvailability" type="Boolean" type-id="Uml.Boolean" visibility="public" abstract="false" virtual="false" static="false">
+              <operation id="o13e9f00c4efb407f8a0ee912dedf4e6c649" name="getAvailability" type="Boolean[]" type-id="Boolean[]" visibility="public" abstract="false" virtual="false" static="false">
                 <parameters />
                 <stereotypes />
                 <documentation>
@@ -1252,7 +1207,180 @@
                   <source-code language="ActionScript" />
                 </source-codes>
               </operation>
-              <operation id="oa757a0a2422d4d8994f60545d2e3626e960" name="getString" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <operation id="oa757a0a2422d4d8994f60545d2e3626e960" name="toString" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <source-codes />
+              </operation>
+            </operations>
+            <template-parameters>
+              <source-codes />
+            </template-parameters>
+          </item>
+          <item id="di229111856559645484" cid="REL001" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 10:55:01">
+            <stereotypes />
+            <tagged-values />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <relation from="di427846355108558248" to="di171933797277361851">
+              <start-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di917219840591843407" cid="C001" type="class" name="Booking" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/17/2013 11:20:15">
+            <stereotypes />
+            <tagged-values />
+            <documentation>
+              <text>
+                <content>
+                  <paragraph line-spacing="1">
+                    <p index="0">
+                      <t />
+                      <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                        <text>
+                          <solid-brush color="#FF000000" />
+                        </text>
+                      </style>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </documentation>
+            <cooperation>
+              <participants />
+              <comments />
+            </cooperation>
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <attributes>
+              <attribute id="a41167c819d274ede940ce0d5a4bec23b713" name="customer" type="Customer" type-id="Customer" visibility="private" abstract="false" virtual="false">
+                <stereotypes />
+                <documentation>
+                  <text>
+                    <content>
+                      <paragraph line-spacing="1">
+                        <p index="0">
+                          <t />
+                          <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                            <text>
+                              <solid-brush color="#FF000000" />
+                            </text>
+                          </style>
+                        </p>
+                      </paragraph>
+                    </content>
+                  </text>
+                </documentation>
+              </attribute>
+              <attribute id="a62a68737413b4a638381f1eb49359d49412" name="room" type="Room" type-id="Room" visibility="private" abstract="false" virtual="false">
+                <stereotypes />
+                <documentation>
+                  <text>
+                    <content>
+                      <paragraph line-spacing="1">
+                        <p index="0">
+                          <t />
+                          <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                            <text>
+                              <solid-brush color="#FF000000" />
+                            </text>
+                          </style>
+                        </p>
+                      </paragraph>
+                    </content>
+                  </text>
+                </documentation>
+              </attribute>
+              <attribute id="ac96c091f46aa49aea52dc671758d0531352" name="dates[]" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+                <stereotypes />
+                <documentation>
+                  <text>
+                    <content>
+                      <paragraph line-spacing="1">
+                        <p index="0">
+                          <t />
+                          <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                            <text>
+                              <solid-brush color="#FF000000" />
+                            </text>
+                          </style>
+                        </p>
+                      </paragraph>
+                    </content>
+                  </text>
+                </documentation>
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o4e82d9659b224088a16424f835980fe538" name="getCustomer" type="Customer" type-id="Customer" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <source-codes />
+              </operation>
+              <operation id="o1ea3641175ea435bba5339de10eb15fd464" name="getRoom" type="Room" type-id="Room" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <documentation>
+                  <text>
+                    <content>
+                      <paragraph line-spacing="1">
+                        <p index="0">
+                          <t />
+                          <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                            <text>
+                              <solid-brush color="#FF000000" />
+                            </text>
+                          </style>
+                        </p>
+                      </paragraph>
+                    </content>
+                  </text>
+                </documentation>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="oa26e8410007f4be0afc25bd961373a07808" name="getDates" type="String[]" type-id="String[]" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <documentation>
+                  <text>
+                    <content>
+                      <paragraph line-spacing="1">
+                        <p index="0">
+                          <t />
+                          <style font-name="Arial" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                            <text>
+                              <solid-brush color="#FF000000" />
+                            </text>
+                          </style>
+                        </p>
+                      </paragraph>
+                    </content>
+                  </text>
+                </documentation>
+                <source-codes>
+                  <source-code language="ActionScript" />
+                </source-codes>
+              </operation>
+              <operation id="oa41e3b4cd8484d55ab3afaee6bc70e0c349" name="setCustomer" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <source-codes />
+              </operation>
+              <operation id="o4137f1294344475a945d45786b03dbaa269" name="setRoom" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <source-codes />
+              </operation>
+              <operation id="o5934f68f0d464e0dbaa4113902d98f9516" name="setDates" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+                <parameters />
+                <stereotypes />
+                <source-codes />
+              </operation>
+              <operation id="o9ab4115d31a04c31b7e3f413c28086d2159" name="toString" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
                 <parameters />
                 <stereotypes />
                 <source-codes />
@@ -1264,13 +1392,13 @@
               </source-codes>
             </template-parameters>
           </item>
-          <item id="di229111856559645484" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 10:55:01">
+          <item id="di269452142135511039" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/17/2013 11:35:02">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di427846355108558248" to="di171933797277361851">
+            <relation from="di161972662510943229" to="di917219840591843407">
               <start-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -1278,11 +1406,11 @@
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
           <item id="di427846355108558248" iid="7f98ee9bf222420aa8656d8d0628bd23" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="02/15/2013 14:08:23" order-index="0" type="entity">
-            <layout ax="30" ay="101" awidth="172" aheight="259" x="30" y="101" width="172" height="259" angle="0" />
+            <layout ax="30" ay="101" awidth="172" aheight="293" x="30" y="101" width="172" height="293" angle="0" />
             <class />
           </item>
           <item id="di161972662510943229" iid="ac67ace00dc64b5ab839fa24f6dbc54f" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="02/15/2013 14:08:23" order-index="0" type="entity">
-            <layout ax="266" ay="33" awidth="429" aheight="393" x="266" y="33" width="429" height="393" angle="0" />
+            <layout ax="266" ay="71" awidth="429" aheight="328" x="266" y="71" width="429" height="328" angle="0" />
             <class />
           </item>
           <item id="di861762156388484350" iid="b135f4d8394e49798ac5037bf2d53147" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="02/15/2013 14:15:13" order-index="1" type="entity">
@@ -1290,37 +1418,51 @@
             <class />
           </item>
           <item id="di164896029538208637" iid="4258166ea6fd4194a86ab8f3f116f7ab" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="02/15/2013 14:29:39" order-index="2" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="266" y1="230" x2="202" y2="230" start-border-pos="0.875318066157761" end-border-pos="0.374517374517375">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="266" y1="243" x2="202" y2="245" start-border-pos="0.880825345109149" end-border-pos="0.372805950177814">
               <points>
-                <point x="266" y="230" />
-                <point x="202" y="230" />
+                <point x="266" y="243" />
+                <point x="202" y="245" />
               </points>
             </layout>
             <relation from="di161972662510943229" from-iid="ac67ace00dc64b5ab839fa24f6dbc54f" to="di427846355108558248" to-iid="7f98ee9bf222420aa8656d8d0628bd23" />
             <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
           </item>
           <item id="di994016920366209758" iid="9fb30068faae47dcbb8da895addea213" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="02/15/2013 14:29:41" order-index="3" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="695" y1="230" x2="787" y2="230" start-border-pos="0.375318066157761" end-border-pos="0.874513618677043">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="695" y1="232" x2="787" y2="231" start-border-pos="0.372855081790831" end-border-pos="0.875468554663751">
               <points>
-                <point x="695" y="230" />
-                <point x="787" y="230" />
+                <point x="695" y="232" />
+                <point x="787" y="231" />
               </points>
             </layout>
             <relation from="di161972662510943229" from-iid="ac67ace00dc64b5ab839fa24f6dbc54f" to="di861762156388484350" to-iid="b135f4d8394e49798ac5037bf2d53147" />
             <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
           </item>
           <item id="di171933797277361851" iid="4570e55adb3e450f8609a25819a6e62c" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="03/02/2013 10:28:18" order-index="4" type="entity">
-            <layout ax="24" ay="397" awidth="187" aheight="184" x="24" y="397" width="187" height="184" angle="0" />
+            <layout ax="23" ay="463" awidth="187" aheight="187" x="23" y="463" width="187" height="187" angle="0" />
             <class />
           </item>
           <item id="di229111856559645484" iid="0419d0bbb8394980bf97d1cd80f03746" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="03/02/2013 10:55:01" order-index="5" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="117" y1="360" x2="117" y2="397" start-border-pos="0.626459099525629" end-border-pos="0.124718681376248">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="116" y1="394" x2="116" y2="463" start-border-pos="0.625" end-border-pos="0.124331550802139">
               <points>
-                <point x="117" y="360" />
-                <point x="117" y="397" />
+                <point x="116" y="394" />
+                <point x="116" y="463" />
               </points>
             </layout>
             <relation from="di427846355108558248" from-iid="7f98ee9bf222420aa8656d8d0628bd23" to="di171933797277361851" to-iid="4570e55adb3e450f8609a25819a6e62c" />
+            <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
+          </item>
+          <item id="di917219840591843407" iid="ed526053f9bd41cb8ed4b4c424e30759" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="03/17/2013 11:20:15" order-index="6" type="entity">
+            <layout ax="386" ay="466" awidth="195" aheight="204" x="386" y="466" width="195" height="204" angle="0" />
+            <class />
+          </item>
+          <item id="di269452142135511039" iid="f8261ced8bef4738be03a324201dd424" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="03/17/2013 11:35:02" order-index="7" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="482" y1="399" x2="483" y2="466" start-border-pos="0.625856626283872" end-border-pos="0.124070231119792">
+              <points>
+                <point x="482" y="399" />
+                <point x="483" y="466" />
+              </points>
+            </layout>
+            <relation from="di161972662510943229" from-iid="ac67ace00dc64b5ab839fa24f6dbc54f" to="di917219840591843407" to-iid="ed526053f9bd41cb8ed4b4c424e30759" />
             <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
           </item>
         </layer>
@@ -1343,42 +1485,42 @@
         </meta>
         <tagged-values />
         <abstract-items>
-          <item id="di243073634552790709" cid="AC001" type="actor" name="Tourist Information Staff" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:18:22">
+          <item id="di243073634552790709" cid="AC001" type="actor" name="Tourist Information Staff" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:18:22">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di253074693290032913" cid="BDR001" type="boundary" name="user selects to search for availability" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:19:05">
+          <item id="di253074693290032913" cid="BDR001" type="boundary" name="user selects to search for availability" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:19:05">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di575219683264149482" cid="CTRL001" type="uml-control" name="systems gets name of hotel from selection" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:20:21">
+          <item id="di575219683264149482" cid="CTRL001" type="uml-control" name="systems gets name of hotel from selection" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:20:21">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di152672018789533674" cid="CTRL002" type="uml-control" name="system searches for room availability for matching hotel" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:21:34">
+          <item id="di152672018789533674" cid="CTRL002" type="uml-control" name="system searches for room availability for matching hotel" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:21:34">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di559025752241570908" cid="ENT001" type="uml-entity" name="Rooms" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:07">
+          <item id="di559025752241570908" cid="ENT001" type="uml-entity" name="Rooms" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:07">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di471513731944297293" cid="REL002" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:32">
+          <item id="di471513731944297293" cid="REL002" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:32">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -1389,7 +1531,7 @@
               <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di219024806769814622" cid="REL003" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:35">
+          <item id="di219024806769814622" cid="REL003" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:35">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -1400,7 +1542,7 @@
               <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di947992342566548514" cid="REL004" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:37">
+          <item id="di947992342566548514" cid="REL004" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:22:37">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -1411,7 +1553,7 @@
               <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di637098505526897327" cid="REL006" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:28:24">
+          <item id="di637098505526897327" cid="REL006" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:28:24">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -1422,14 +1564,14 @@
               <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di960599322314100902" cid="ENT002" type="uml-entity" name="TouristInformation" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:27:42">
+          <item id="di960599322314100902" cid="ENT002" type="uml-entity" name="TouristInformation" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:27:42">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di457150714899474677" cid="REL007" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:28:27">
+          <item id="di457150714899474677" cid="REL007" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:28:27">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -1440,14 +1582,14 @@
               <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di376800761372113109" cid="BDR002" type="boundary" name="Results returned to user" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:28:59">
+          <item id="di376800761372113109" cid="BDR002" type="boundary" name="Results returned to user" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:28:59">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di349499263268437336" cid="REL009" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:29:31">
+          <item id="di349499263268437336" cid="REL009" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:29:31">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -1458,7 +1600,7 @@
               <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di372829960211601324" cid="REL010" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:29:33">
+          <item id="di372829960211601324" cid="REL010" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/02/2013 11:29:33">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
